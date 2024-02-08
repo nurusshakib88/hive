@@ -1,0 +1,204 @@
+.all-users {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-bottom: 25px;
+
+  .loader {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner-border {
+      color: var(--primary-color);
+    }
+  }
+
+  .single-user {
+    height: 80px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 5px 5px 10px 5px;
+    padding: 0 10px;
+    box-shadow: 1px 1px 5px 0.5px var(--light-shadow);
+
+    .user-img {
+      width: 22%;
+      overflow: hidden;
+      img {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover !important;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../../assets/default-user.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .user-details {
+      width: 78%;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      &.hidden {
+        visibility: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: var(--secondary-color);
+
+        h4 {
+          font-size: 18px;
+          text-transform: capitalize;
+          margin-bottom: 0;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      .user-form {
+        margin-top: 10px;
+        color: var(--secondary-color);
+        background-color: var(--accent-color);
+        overflow: hidden;
+        border-radius: 10px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        box-shadow: inset 0.5px 1px 4px var(--light-shadow);
+
+        input {
+          color: var(--secondary-color);
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .all-users {
+    margin: 20px 0;
+    position: absolute;
+    width: 65px;
+    right: 0;
+    z-index: 99;
+
+    .single-user {
+      background-color: transparent;
+      height: max-content;
+      margin-bottom: 15px;
+      box-shadow: none;
+
+      .user-img {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .all-users {
+    .single-user {
+      background-color: transparent;
+      height: max-content;
+      margin-bottom: 15px;
+      box-shadow: none;
+
+      .user-img {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .all-users {
+    .single-user {
+      background-color: transparent;
+      height: max-content;
+      margin-bottom: 15px;
+      box-shadow: none;
+
+      .user-img {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .all-users {
+    .single-user {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      .user-img {
+        width: 20%;
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      .user-details {
+        width: 76%;
+        a {
+          h4 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

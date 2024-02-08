@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body.light-mode {
+  --bg-color: #d7eef1;
+  --background-color: #182126;
+  --primary-color: #5c11ff;
+  --hover-color: #6c28fe;
+  --secondary-color: #060606;
+  --accent-color: #d8e3fd;
+  --shadow: hsla(0, 0%, 0%, 0.2);
+  --light-shadow: hsla(0, 0%, 0%, 0.2);
+  --shine-color: rgb(176, 225, 234);
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --background-color: #182126;
+  /* --primary-color: #fdfd46; */
+  --primary-color: #5c11ff;
+  --hover-color: #6c28fe;
+  --secondary-color: #fff;
+  --accent-color: #222222;
+  /* --accent-color: #1e252e; */
+  --shadow: hsla(0, 0%, 0%, 0.5);
+  --light-shadow: transparent;
+  --shine-color: #333333;
+}
+
+body {
+  margin-top: 12vh !important;
+  background-color: var(--bg-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.Toastify__toast-theme--dark {
+  background: var(--background-color) !important;
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+html {
+  scrollbar-width: none;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+.load {
+  background: linear-gradient(
+    -45deg,
+    var(--bg-color),
+    var(--shine-color),
+    var(--bg-color)
+  );
+  background-size: 200% 200%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+.Toastify__toast {
+  z-index: 9999 !important;
+  color: var(--secondary-color) !important;
+  background-color: var(--accent-color) !important;
+
+  button {
+    color: var(--secondary-color) !important;
+  }
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .main-content {
+    padding-bottom: 8vh;
+    padding-top: 2vh;
+  }
+}

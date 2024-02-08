@@ -1,0 +1,73 @@
+.RightSidebar {
+  height: 88vh;
+  overflow: hidden;
+  background-color: var(--accent-color);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 2px 2px 5px var(--light-shadow);
+
+  .all-user-header {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: capitalize;
+  }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .RightSidebar {
+    background-color: transparent;
+    box-shadow: none;
+    .all-user-header {
+      display: none;
+    }
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .RightSidebar {
+    padding-top: 10px;
+    .all-user-header {
+      padding: 0 3px;
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      height: 8vh;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .RightSidebar {
+    .all-user-header {
+      padding: 0 8px;
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      height: 8vh;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

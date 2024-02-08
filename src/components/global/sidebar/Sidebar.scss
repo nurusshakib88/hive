@@ -1,0 +1,355 @@
+.sidebar {
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .profile-card {
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px var(--light-shadow);
+
+    .card-img-top {
+      height: 120px;
+    }
+
+    .sidebar-profile {
+      display: flex;
+      align-items: end;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .follower,
+      .following {
+        padding: 0 20px;
+        margin-bottom: 10px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0;
+          line-height: 5px;
+        }
+        span {
+          font-weight: 300;
+          margin: 0;
+          font-size: 10px;
+        }
+      }
+
+      .sidebar-profile-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 30px;
+        object-fit: cover;
+        border: 7px solid var(--accent-color);
+      }
+    }
+
+    .card-body {
+      margin-top: 60px;
+      .card-title {
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .card-text {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 20px 0;
+      }
+
+      button {
+        height: 35px;
+        padding: 0;
+        display: block;
+        width: 100%;
+        background-color: var(--primary-color);
+        border: none;
+        overflow: hidden;
+
+        a {
+          display: block;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: #fff;
+        }
+
+        &:hover {
+          background-color: var(--hover-color);
+        }
+      }
+    }
+  }
+
+  .sidebar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      font-weight: 700;
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      justify-content: space-between;
+      color: var(--secondary-color);
+      width: 48%;
+      height: 40px;
+      border-radius: 10px;
+      background-color: var(--accent-color);
+      border: none;
+      box-shadow: 2px 2px 5px 2px var(--light-shadow);
+      &:hover {
+        color: #fff;
+        background-color: var(--primary-color);
+      }
+
+      svg {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+
+    .sidebar-logout {
+      width: 48%;
+      height: 40px;
+      .logout-btn {
+        box-shadow: 2px 2px 5px 2px var(--light-shadow);
+        justify-content: center;
+        border-radius: 8px !important;
+      }
+    }
+  }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .sidebar {
+    box-shadow: -0.5px 0px 5px var(--shadow);
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8vh;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 0 12px;
+
+    .profile-card {
+      box-shadow: none;
+      background-color: transparent;
+      .card-img-top {
+        display: none;
+      }
+
+      .sidebar-profile {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .sidebar-profile-img {
+          width: 35px;
+          height: 35px;
+          border: 3px solid var(--accent-color);
+        }
+      }
+    }
+
+    .menubar {
+      margin: auto 0;
+
+      a {
+        color: var(--secondary-color);
+        margin: 0 10px;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .sidebar-btn {
+      .theme-toggle {
+        width: max-content;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+
+        &:hover {
+          color: inherit;
+          background-color: transparent;
+        }
+        svg {
+          font-size: 20px;
+        }
+      }
+
+      .sidebar-logout {
+        display: none;
+      }
+    }
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .sidebar {
+    .profile-card {
+      .card-img-top {
+        height: 90px;
+      }
+      .sidebar-profile {
+        top: 15px;
+
+        .sidebar-profile-img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    .sidebar-btn {
+      flex-direction: column;
+      .theme-toggle {
+        width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          margin: 0 !important;
+        }
+      }
+      button {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .sidebar-logout {
+        width: 100%;
+        height: 40px;
+
+        .logout-btn {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidebar {
+    .profile-card {
+      .card-img-top {
+        height: 100px;
+      }
+      .sidebar-profile {
+        top: 15px;
+
+        .sidebar-profile-img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+
+    .sidebar-btn {
+      flex-direction: column;
+      .theme-toggle {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .sidebar-logout {
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .sidebar {
+    .profile-card {
+      .card-img-top {
+        height: 100px;
+      }
+      .sidebar-profile {
+        top: 60px;
+        .follower,
+        .following {
+          padding: 0 10px;
+          margin-bottom: 10px;
+        }
+
+        .sidebar-profile-img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      .card-body {
+        margin-top: 40px;
+
+        .card-text {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .sidebar-btn {
+      .theme-toggle {
+        width: 48.5%;
+      }
+      button {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .sidebar-logout {
+        width: 48.5%;
+        height: 40px;
+        .logout-btn {
+          svg {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

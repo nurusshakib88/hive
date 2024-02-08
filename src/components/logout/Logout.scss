@@ -1,0 +1,52 @@
+.logout-btn {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left !important;
+  padding: 0 15px !important;
+  color: var(--secondary-color) !important;
+  background-color: var(--accent-color) !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  svg {
+    font-size: 20px;
+    margin-right: auto;
+  }
+
+  &:hover {
+    color: #fff !important;
+    background-color: var(--primary-color) !important;
+  }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .logout-btn {
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}
